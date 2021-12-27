@@ -1,0 +1,19 @@
+{% extends 'main.html'%}
+
+{% block content %}
+
+<h1>{{project.title}}</h1>
+{% for tag in tags%}
+<span style="border: 1px solid grey; padding: 1em;">{{tag}}</span>
+{% endfor %}
+<hr>
+<p>{{project.description}}</p>
+ <hr>
+<h1>Review:</h1>
+{% for review in reviews%}
+   <p>{{review.created}}</p>
+   <p>{{review.value}}</p>
+   <p>{{review.body}}</p>
+{% endfor %}
+
+{% endblock content %}
